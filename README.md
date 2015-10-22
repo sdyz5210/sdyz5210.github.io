@@ -1,2 +1,5 @@
-# sdyz5210.github.io
-夏天的博客
+#jekylll blog
+
+* 基于jekyll的blog
+* 使用了bootstrap框架
+* 使用font-awesome进行修饰
