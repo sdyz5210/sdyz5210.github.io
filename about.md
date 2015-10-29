@@ -3,7 +3,15 @@ layout: default
 title:about me
 ---
 
+#基本信息
+
+夏天/男/1986
+山东大学
+Github: http://github.com/sdyz5210
+Twitter: http://twitter.com/sdyz5210
+
 #个人说明
+
 目前从事于生物信息行业的软件开发，在这个行业马趴滚打了5年，逐步涉及到基因序列数据分析领域。目前使用的技术多为Java、Python语言，同时在往Hadoop、Spark方面学习。
 
 #博客说明
