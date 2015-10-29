@@ -8,7 +8,7 @@ tags: [java]
 #绝对路径#
 我们在本机写一些测试方法时，经常会直接把加载文件的路径写死，即写成绝对路径进行处理，毕竟这样节省时间。这里的例子我们忽略文件是否存在等异常问题。
 
-``` java:n  
+```
 String fileName = "/Users/summer/Documents/workspaces/test.properties";
 Properties p = new Properties();
 InputStream in = new FileInputStream(fileName);
@@ -26,7 +26,7 @@ System.out.println(p);
 
 ###方式一###
 
-```java:n
+```
 String fileName = "test.properties";
 Properties p = new Properties();
 InputStream in = Thread.currentThread().getContextClassLoader().getResourceAsStream(fileName);
@@ -36,7 +36,7 @@ System.out.println(p);
 
 ###方式二###
 
-```java:n
+```
 String fileName = "test.properties";
 Properties p = new Properties();
 InputStream in = ClassLoader.getSystemResourceAsStream(fileName);
@@ -46,7 +46,7 @@ System.out.println(p);
 
 ###方式三###
 
-```java:n
+```
 String fileName = "test.properties";
 Properties p = new Properties();
 //Demo类是加载资源使用的类，本人在这里写成Demo类
@@ -57,7 +57,7 @@ System.out.println(p);
 ##资源文件放置类目录下面##
 资源文件放在类目录下面，我们可以使用类进行加载，例如com.summer.Demo类，com.summer目录下面同样存放这test.properties配置文件，我们可以在Demo类中加载配置文件，如下：
 
-```java:n
+```
 String fileName = "test.properties";
 Properties p = new Properties();
 //Demo类是加载资源使用的类，本人在这里写成Demo类

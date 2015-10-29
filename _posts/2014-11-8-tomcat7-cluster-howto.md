@@ -174,7 +174,7 @@ webserver2的配置
 
 接下来是对session复制的配置，下面是webserver1上的配置：
 
-```java:n
+```
 
 <Cluster className="org.apache.catalina.ha.tcp.SimpleTcpCluster"
           channelSendOptions="8">

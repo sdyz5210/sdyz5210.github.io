@@ -19,7 +19,7 @@ Mysql的安装可以参考：[Mysql安装](http://fee.im/2014/08/20/centos6.4-my
 主从服务器都已经安装上了MariaDB5.5.40，root初始密码为：123abc
 
 ##主服务器配置##
-```java:n
+```
  #打开配置文件
 vim /etc/my.cnf
 

@@ -9,7 +9,7 @@ tags: [python]
 
 #我的第一个python gui程序
 
-```python
+```
  #!/usr/bin/evn python
  # -*- coding: utf-8 -*-
  #filename:helloworld.py
