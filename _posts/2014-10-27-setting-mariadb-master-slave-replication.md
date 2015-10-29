@@ -53,7 +53,7 @@ vim /etc/my.cnf
 记录下 File 及 Position 的值，在后面进行从服务器操作的时候需要用到。
 
 ##从服务器配置##
-```java:n
+```
  #打开配置文件
  vim /etc/my.cnf
  

@@ -34,7 +34,7 @@ make
 
 注意：如果用户在其他的操作系统上面安装，比如mac下面，可以参考《Mac上安装samtools》。
 如果在ubuntu安装samtools，请注意。在make之前可能需要安装
-```sh
+```
 sudo apt-get install zlib1g-dev
 sudo apt-get install libncurses5-dev libncursesw5-dev
 ```
