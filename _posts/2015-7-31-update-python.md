@@ -6,7 +6,7 @@ tags: [python]
 
 ---
 
-1、yum install libjpeg-devel gcc gcc-c++  zlib-devel bzip2-devel openssl-devel xz-libs
+1、`yum install libjpeg-devel gcc gcc-c++  zlib-devel bzip2-devel openssl-devel xz-libs`
 
 2、下载python最新版2.7.10解压缩后进行安装
 
