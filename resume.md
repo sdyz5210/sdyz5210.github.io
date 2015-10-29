@@ -5,7 +5,7 @@ title: About Me
 
 ### 基本信息
 
-* 夏天/男/1984
+* 夏天/男/1986
 * 山东大学
 * Github: [http://github.com/sdyz5210](http://github.com/sdyz5210)
 * Twitter: [http://twitter.com/sdyz5210](http://twitter.com/sdyz5210)
