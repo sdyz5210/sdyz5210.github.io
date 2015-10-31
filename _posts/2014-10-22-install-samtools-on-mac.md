@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mac上安装生物信息工具samtools
-category: program
+category: bio
 tags: [samtools,biosoft]
 ---
 
