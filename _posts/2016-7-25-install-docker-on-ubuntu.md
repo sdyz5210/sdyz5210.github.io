@@ -5,7 +5,8 @@ category: program
 tags: [docker]
 ---
 
-#ubuntu#
+#操作系统为ubuntu#
+
 Docker可以安装在下列ubuntu的版本上：
 
 * Ubuntu Xenial 16.04 (LTS)
@@ -61,3 +62,19 @@ $ sudo apt-get install docker-engine
 $ sudo service docker start
 $ sudo docker run hello-world
 ```
+
+#其他可选配置#
+
+默认情况下，docker启动是以root账户启动的，所以在ubuntu中，直接启动docker会出现下面的问题：
+```
+Cannot connect to the Docker daemon. Is the docker daemon running on this host?
+```
+所以启动或者使用docker相关命令必须使用sudo或者root权限。
+
+当然也可以通过下面的方式解决
+
+```
+$ sudo groupadd docker
+$ sudo usermod -aG docker ubuntu
+```
+之后重新启动一下就可以了 
