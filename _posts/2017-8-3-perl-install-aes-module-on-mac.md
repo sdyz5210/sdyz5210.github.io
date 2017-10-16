@@ -1,7 +1,7 @@
 ---
 layout: post  
 title: mac上安装perl的AES加密模块异常  
-category: program  
+date: 2017-08-03 
 tags: [perl]  
 
 --- 
