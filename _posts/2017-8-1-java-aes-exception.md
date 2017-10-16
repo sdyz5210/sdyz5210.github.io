@@ -6,10 +6,10 @@ tags: [mysql]
 
 --- 
 
-##问题描述
+###  问题描述
 在学习AES算法时，从互联网上找了例子，但是在自己运行下一直报错，错误信息如下：
 
-```java
+```
 
 javax.crypto.BadPaddingException: Given final block not properly padded
 	at com.sun.crypto.provider.CipherCore.doFinal(CipherCore.java:811)
@@ -26,9 +26,9 @@ javax.crypto.BadPaddingException: Given final block not properly padded
 
 原因二：加密和解密时使用的密钥不一致。所以怀疑是由于生成的密钥不同造成的。`SecureRandom random = new SecureRandom();`这个对象每次调用生成的密钥都不一样，所以在加密和解密过程如果这个密钥不一致就会出错。当然我们也可以指定生成密钥的种子，让密钥生成每次都一样`random.setSeed("123456".getBytes());`即可。
 
-##解决方式
+### 解决方式
 
-```java
+```
 
 KeyGenerator kgen = KeyGenerator.getInstance("AES");
 			SecureRandom secureRandom = SecureRandom.getInstance("SHA1PRNG");
