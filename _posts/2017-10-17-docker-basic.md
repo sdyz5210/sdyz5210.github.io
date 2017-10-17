@@ -84,19 +84,20 @@ docker push sdyz5210/ubuntu:16.04
 ### 在nginx中运行swagger服务
 
 1、 直接从仓库拉取
- docker pull nginx
+` docker pull nginx`
 
 2、 启动部署nginx   
- docker run -it --rm nginx bin/bash
+` docker run -it --rm nginx bin/bash`
 
 3、将swagger-ui部署在nginx中，静态资源存在在宿主机器上
 
 将静态目录映射到nginx的部署目录中
-docker run --name nginx-test -d -p 8080:80 -v /Users/mac/Documents/workspaces/dockers/swagger/swagger-ui-master/dist:/usr/share/nginx/html nginx
+
+` docker run --name nginx-test -d -p 8080:80 -v /Users/mac/Documents/workspaces/dockers/swagger/swagger-ui-master/dist:/usr/share/nginx/html nginx`
 
 4、将swagger-editer部署在nginx，静态资源存放在宿主主机上
 
-docker run --name nginx-test -d -p 8080:80 -v /Users/mac/Documents/workspaces/dockers/swagger/swagger-editor:/usr/share/nginx/html nginx
+`docker run --name nginx-test -d -p 8080:80 -v /Users/mac/Documents/workspaces/dockers/swagger/swagger-editor:/usr/share/nginx/html nginx`
 
 
 ### 基于nginx镜像，打包自己的swagger服务
