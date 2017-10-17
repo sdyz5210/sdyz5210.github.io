@@ -84,10 +84,12 @@ docker push sdyz5210/ubuntu:16.04
 ### 在nginx中运行swagger服务
 
 1、 直接从仓库拉取
-` docker pull nginx`
 
-2、 启动部署nginx   
-` docker run -it --rm nginx bin/bash`
+` docker pull nginx `
+
+2、 启动部署nginx 
+
+` docker run -it --rm nginx bin/bash `
 
 3、将swagger-ui部署在nginx中，静态资源存在在宿主机器上
 
