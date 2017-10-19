@@ -15,9 +15,13 @@ tags: [python]
 	cd Python-2.7.10/
 	./configure --prefix=/usr/local
 	make all
-  	make install
-    make clean
-    make distclean
+	make install
+	make clean
+	make distclean
+
+	#保存老版本并创建新版本链接
+	mv /usr/bin/python /usr/bin/python2.6.6
+	ln -s /usr/local/bin/python2.7 /usr/bin/python
 
 ```
 
