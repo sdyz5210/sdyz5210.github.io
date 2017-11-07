@@ -25,14 +25,17 @@ yum -y install httpd php php-mysql php-common php-mbstring php-gd php-odbc php-p
 #### 3、安装并配置数据库
 
 在centos7中，mysql不会自动安装，需要自动安装mariadb
-安装mariadb数据库
-yum -y install mariadb*
-启动数据库服务
-systemctl start mariadb
-设置开机启动
-systemctl enable mariadb
-设置数据库root账号密码
-mysql_secure_installation
+
+```
+ #安装mariadb数据库
+ yum -y install mariadb*
+ 启动数据库服务
+ systemctl start mariadb
+ #设置开机启动
+ #systemctl enable mariadb
+ #设置数据库root账号密码
+ mysql_secure_installation
+```
 
 #### 4、同步服务端的时间，保持所有服务器时间一致避免出现时间不同导致的不可用的监控数据
 
@@ -40,42 +43,54 @@ ntpdate pool.ntp.rog
 
 #### 5、创建zabbix服务运行所需要的用户和组
 
-groupadd  -g 201  zabbix
+groupadd  -g 201  zabbix  
 useradd  -g zabbix  -u 201 -m zabbix
 
 #### 6、创建zabbix所需的数据库
 
+```
 create database zabbix character set utf8;
 grant all privileges on zabbix.* to zabbixuser@'%' identified by 'password';
 flush privileges;
+```
 
 #### 7、下载zabbix
+
+```
 wget -c https://jaist.dl.sourceforge.net/project/zabbix/ZABBIX%20Latest%20Stable/2.4.3/
 tar -zxvf zabbix-2.4.3.tar.gz
 cd zabbix-2.4.3
 
+```
+
 #### 8、将zabbix数据库导入到mariadb
 
+```
 mysql -uzabbixuser -p zabbix < ~/zabbix-2.4.3/database/mysql/schema.sql
 mysql -uzabbixuser -p zabbix < ~/zabbix-2.4.3/database/mysql/images.sql
 mysql -uzabbixuser -p zabbix < ~/zabbix-2.4.3/database/mysql/data.sql
+```
 
 #### 9、编译安装zabbix
 
 此处指定sysconfdir配置文件的路径就在/etc/zabbix/目录下了，如果不指定默认在/usr/local/etc下
+
 ./configure --sysconfdir=/etc/zabbix/ --enable-server --enable-agent --with-net-snmp --with-libcurl --with-mysql
+
 make && make install
 
 #### 10、设置开机自动启动
 
 * centos6
 
+```
 cp misc/init.d/tru64/zabbix_agentd /etc/init.d/
 cp misc/init.d/tru64/zabbix_server /etc/init.d/
 chmod +x /etc/init.d/zabbix_*
-
+```
 * centos7
 
+```
 [Unit]
 Description=zabbix
 After=network.target remote-fs.target nss-lookup.target
@@ -88,23 +103,33 @@ ExecStop=/usr/local/sbin/zabbix_server stop ; /usr/local/sbin/zabbix_agentd relo
 
 [Install]
 WantedBy=multi-user.target
+```
 
 #### 10、部署zabbix服务
+
+```
 mkdir /var/www/html/zabbix
 cp -a frontends/php/* /var/www/html/zabbix/
 chown -R  apache.apache /var/www/html/zabbix/
+```
 
 #### 11、配置php文件，适应zabbix安装所需的参数
+
+```
 vim /etc/php.ini
 date.timezone = Asia/Shanghai
 max_execution_time = 300
 max_input_time = 300
 post_max_size = 32M
+```
 
 #### 12、配置apache
-	暂未做特殊配置
+
+```
+ #暂未做特殊配置
 vim /etc/httpd/conf/httpd.conf
 ServerName 127.0.0.1:80
+```
 
 #### 13、zabbix server 配置
 
@@ -138,21 +163,27 @@ LogSlowQueries=1000
 #### 1、安装开发环境
 
 yum -y groupinstall "Development Tools"
+
 yum –y install ntpdate
 
 #### 2、同步时间
+
 ntpdate pool.ntp.org
 
 #### 3、创建zabbix用户和组
 groupadd  -g 201 zabbix
+
 useradd -g zabbix -u 201 -m zabbix
 
 #### 4、安装
+
+```
 tar xf zabbix-2.4.3.tar.gz
 tar -zxvf zabbix-2.4.3.tar.gz
 cd zabbix-2.4.3
 ./configure --sysconfdir=/etc/zabbix --enable-agent
 make && make install
+```
 
 #### 5、设置agent自动运行
 
