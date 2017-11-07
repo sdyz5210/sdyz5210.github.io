@@ -47,3 +47,13 @@ tags: [python]
 	pip install pillow
 	pip install reportlab
 ```
+
+6、修改yum的配置
+
+此时更新换python后，yum应该是无法使用的，因为yum依赖于python2.6版本，现在的python版本已经是2.7了，修改yum的配置。
+
+```
+vim /usr/bin/yum
+#!/usr/bin/python  -> #!/usr/bin/python2.6
+
+```
