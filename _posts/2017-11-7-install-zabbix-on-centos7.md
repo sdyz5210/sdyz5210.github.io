@@ -74,12 +74,13 @@ mysql -uzabbixuser -p zabbix < ~/zabbix-2.4.3/database/mysql/data.sql
 #### 9、编译安装zabbix
 
 此处指定sysconfdir配置文件的路径就在/etc/zabbix/目录下了，如果不指定默认在/usr/local/etc下
-
+```
 ./configure --sysconfdir=/etc/zabbix/ --enable-server --enable-agent --with-net-snmp --with-libcurl --with-mysql
-
 make && make install
-
+```
 #### 10、设置开机自动启动
+
+由于centos6、7在版本使用上有些差异，所以在配置开机启动时有两种方式，这里标记为centos6和centos7两种方式
 
 * centos6
 
