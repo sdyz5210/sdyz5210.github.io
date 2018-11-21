@@ -72,7 +72,9 @@ ENV CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 
 2、 构建
 
-` docker build -t sdyz5210/ubuntu16.04 `
+在Dockerfile当前目录构建：
+
+` docker build -t sdyz5210/ubuntu16.04 .`
 
 3、 提交到docker仓库
 
