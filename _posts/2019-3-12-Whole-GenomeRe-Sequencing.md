@@ -6,7 +6,7 @@ tags: [basic]
 
 ---
 
-## 什么是全基因组重测序## 
+## 什么是全基因组重测序
 
 全基因组重测序是对已知基因组序列的物种进行不同个体的基因组测序，并在此基础上对个体或群体进行差异性分析。全基因组重测序的个体，通过序列比对，可以找到大量的单核苷酸多态性位点（SNP），插入缺失位点（InDel，Insertion/Deletion）、结构变异位点（SV，Structure Variation）位点和拷贝数变异位点（CNV，copy number variation)。SBC可以协助客户，通过生物信息手段，分析不同个体基因组间的结构差异， 同时完成注释。
 
@@ -26,6 +26,7 @@ tags: [basic]
 
 简化基因组测序（GBS, Genotyping by Sequencing） 将基因组DNA进行酶切，然后对酶切片段序列进行测序，一般能捕获全基因组的1%序列，主要用于检测SNP，成本低适合大规模样品标记筛选。
 
-## 参考文献 ##
+## 参考文献 
 
 * [百度知识](https://baike.baidu.com/item/%E5%85%A8%E5%9F%BA%E5%9B%A0%E7%BB%84%E9%87%8D%E6%B5%8B%E5%BA%8F)
+* [重测序之BSA](https://www.jianshu.com/p/310abfd4a61e)
