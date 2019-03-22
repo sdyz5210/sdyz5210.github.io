@@ -7,28 +7,29 @@ tags: [centos7]
 
 在安装centos7系统的过程中，因为该版本和之前centos6的使用命令有不少的差异，故记录一下centos7中的常用命令。
 
-## 修改主机名
+### 修改主机名
 
-'''
+```
 
 #永久性的修改主机名称，重启后能保持修改后的。
 hostnamectl set-hostname xxx
 
-'''
+```
 
-## 创建RSA密钥
+### 创建RSA密钥
 
-'''
+```
+
 # 执行一下命令，默认回车即可
 ssh-keygen -t rsa
 
-'''
+```
 
-## 修改虚拟机为静态IP地址
+### 修改虚拟机为静态IP地址
 
 主要修改此目录下/etc/sysconfig/network-scripts/ifcfg-enp0s3的文件
 
-'''
+```
 
 TYPE=Ethernet
 PROXY_METHOD=none
@@ -52,12 +53,12 @@ DEVICE=enp0s3
 ONBOOT=yes
 ZONE=public
 
-'''
+```
 
-## 重启网卡命令
+### 重启网卡命令
 
-'''
+```
 
 service network restart
 
-'''
+```

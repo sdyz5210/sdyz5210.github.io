@@ -10,7 +10,8 @@ tags: [perl]
 
 准备熟悉一下perl下的AES加密的功能，但是在安装Crypt::OpenSSL::AES模块时，系统一直提示找不到 openssl/aes.h 文件，openssl重新安装和升级到最新版本一直都是这样的错误。
 
-'''
+```
+
 AES.xs:5:10: fatal error: 'openssl/aes.h' file not found  
  #include <openssl/aes.h>  
          ^  
@@ -23,7 +24,8 @@ Running make test
   Can't test without successful make  
 Running make install  
   Make had returned bad status, install seems impossible  
-'''
+
+```
 
 ### 解决方案
 

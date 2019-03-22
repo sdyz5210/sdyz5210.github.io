@@ -8,7 +8,7 @@ tags: [linux,sftp]
 
 ### 1、问题描述
 
-'''
+```
 
 ➜  ~ jupyter notebook
 The Jupyter HTML Notebook.
@@ -114,14 +114,14 @@ Examples
 [C 20:45:20.915 NotebookApp] Could not decode '\xe6\x9c\xaa\xe5\x91\xbd\xe5\x90\x8d' for unicode trait 'untitled_notebook' of a LargeFileManager instance.
 
 
-'''
+```
 
 ### 解决办法
 
 在启动命令之前加上 LANG=zn 即命令为：
 
-'''
+```
 
 LANG=zn jupyter notebook
 
-'''
+```
