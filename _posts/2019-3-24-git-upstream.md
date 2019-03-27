@@ -1,6 +1,6 @@
 ---
 layout: post
-title: git的frok后远程更新
+title: git的fork后远程更新
 category: program
 tags: [git,github]
 ---

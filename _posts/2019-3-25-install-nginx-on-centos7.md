@@ -76,6 +76,14 @@ Commercial support is available at
 centos7的默认使用firewall-cmd 来管理防火墙。需要开启 80 端口才可以进行远程访问。
 
 ```
+# 查看防火墙的状态
+systemctl status firewalld
+
+# 关闭防火墙
+systemctl stop firewalld
+
+# 关闭防火墙开机自动启动
+systemctl disable firewalld
 
 # 查看端口是否开启,如果显示no为关闭状态
 firewall-cmd --query-port=80/tcp

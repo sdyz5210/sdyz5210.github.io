@@ -105,21 +105,21 @@ vim /etc/sysconfig/network
 
 #增加一下内容
 NISDOMAIN=celloud
-YPSERV_ARGS="-p 1011"
 
 ```
 
 3、配置账户信息的读取顺序
 
 ```
+vim /etc/nsswitch.conf
 
-passwd:     nis files sss
-shadow:     nis files sss
-group:      nis files sss
+passwd:     <font color=gray>nis</font> files sss
+shadow:     <font color=gray>nis</font> files sss
+group:      <font color=gray>nis</font> files sss
 #initgroups: files sss
 
 #hosts:     db files nisplus nis dns
-hosts:      nis files dns myhostname
+hosts:      <font color=gray>nis</font> files dns myhostname
 
 ```
 
