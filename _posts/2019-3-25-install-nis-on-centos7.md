@@ -67,6 +67,8 @@ systemctl enable ypserv
 systemctl enable rpcbind
 systemctl enable yppasswdd.
 
+```
+
 4、创建一个账号并设置密码
 
 ```
