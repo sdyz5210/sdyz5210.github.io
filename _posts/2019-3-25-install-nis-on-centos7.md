@@ -113,13 +113,13 @@ NISDOMAIN=celloud
 ```
 vim /etc/nsswitch.conf
 
-passwd:     <font color=gray>nis</font> files sss
-shadow:     <font color=gray>nis</font> files sss
-group:      <font color=gray>nis</font> files sss
+passwd:     nis files sss
+shadow:     nis files sss
+group:      nis files sss
 #initgroups: files sss
 
 #hosts:     db files nisplus nis dns
-hosts:      <font color=gray>nis</font> files dns myhostname
+hosts:      nis files dns myhostname
 
 ```
 
@@ -238,5 +238,5 @@ Use "passwd"	for map "passwd.byname"
 
 ### 参考资料
 
-[Configure NIS](https://www.server-world.info/en/note?os=Fedora_20&p=nis&f=1)
-[NIS - 深入了解如何搭建NIS环境](https://www.ctolib.com/topics-79802.html)
+* [Configure NIS](https://www.server-world.info/en/note?os=Fedora_20&p=nis&f=1)  
+* [NIS - 深入了解如何搭建NIS环境](https://www.ctolib.com/topics-79802.html)  

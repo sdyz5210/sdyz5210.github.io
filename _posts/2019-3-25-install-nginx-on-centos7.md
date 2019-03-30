@@ -95,3 +95,45 @@ firewall-cmd --zone=public --add-port=80/tcp --permanent
 firewall-cmd --reload
 
 ```
+
+### 配置 ssl 证书
+
+使用 Let's Encrypt 来生成SSL证书，一般生成的证书存放的位置为：/etc/letsencrypt/live/xxxx.com/
+Let's Encrypt 是由非盈利性互联网安全研究小组（ISRG）提供的免费的自动化和开放的证书颁发机构。目前各浏览器支持度比较好，可信度较高。
+
+把下面这部分的代码注释去掉，然后配置相应的ssl证书
+
+```
+
+	server {
+        listen       443 ssl;
+        server_name  www.genecode.cn;
+
+        ssl_certificate      /etc/letsencrypt/live/xxxx.com/fullchain.pem;
+        ssl_certificate_key  /etc/letsencrypt/live/xxxx.com/privkey.pem;
+
+        ssl_session_cache    shared:SSL:1m;
+        ssl_session_timeout  5m;
+
+        ssl_ciphers  HIGH:!aNULL:!MD5;
+        ssl_prefer_server_ciphers  on;
+
+        location / {
+            root   html;
+            index  index.html index.htm;
+        }
+    }
+
+```
+
+同时可以强制http访问的链接转向https访问
+
+```
+
+	listen       80;
+    server_name  www.genecode.cn;
+	# 增加一下一行内容
+	rewrite ^(.*) https://$server_name$1 permanent;
+
+```
+
