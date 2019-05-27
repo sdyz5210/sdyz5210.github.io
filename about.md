@@ -9,13 +9,11 @@ title: 关于我
 
 [Github](http://github.com/sdyz5210)
 
-[Twitter](http://twitter.com/sdyz5210)
-
-[Segmentfault](http://segmentfault.com/u/sdyz5210)
+[个人博客](https://www.fee.im)
 
 #个人说明
 
-目前从事于生物信息行业的软件开发，在这个行业马趴滚打了5年，逐步涉及到基因序列数据分析领域。目前使用的技术多为Java、Python语言，同时在往Hadoop、Spark方面学习。
+目前从事于生物信息行业的软件开发，在这个行业马趴滚打了9年，逐步涉及到基因序列数据分析领域。目前使用的技术多为Java、Python语言，同时在往Hadoop、Spark方面学习。
 
 #博客说明
 
