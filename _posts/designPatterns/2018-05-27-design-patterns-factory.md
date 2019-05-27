@@ -18,7 +18,7 @@ tags: [java,设计模式]
 
 也叫静态工厂模式。工厂类一般使用静态方法，通过传递不同的参数返回不同的对象。
 
-![简单工厂模式](images/design.patterns.factory.simple.png)
+![简单工厂模式](/images/design.patterns.factory.simple.png)
 
 ```
 
@@ -89,7 +89,7 @@ public class SimpleFactoryTest {
 
 在实际应用中，使用简单工厂模式较多。
 
-![工厂方法模式](images/design.patterns.factory.method.png)
+![工厂方法模式](/images/design.patterns.factory.method.png)
 
 ```
 public interface Car {
