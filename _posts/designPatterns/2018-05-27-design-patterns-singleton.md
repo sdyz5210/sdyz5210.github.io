@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 设计模式--单例模式
+title: 设计模式--单例模式[2]
 tags: [java,设计模式]
 ---
 
@@ -71,3 +71,18 @@ public class SingletonDemo2 {
 ```
 
 懒汉式单例模式，非线程安全，需要使用使用synchronized关键字来保证线程安全。
+
+### 测试使用 ###
+
+```
+
+public class SingletonTest {
+    public static void main(String[] args) {
+        SingletonDemo1 s1 = SingletonDemo1.getInstance();
+        SingletonDemo1 s2 = SingletonDemo1.getInstance();
+        System.out.println(s1);
+        System.out.println(s2);
+    }
+}
+
+```

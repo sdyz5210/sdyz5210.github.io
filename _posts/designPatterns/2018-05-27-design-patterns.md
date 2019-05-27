@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 设计模式
+title: 设计模式[1]
 tags: [java,设计模式]
 ---
 
