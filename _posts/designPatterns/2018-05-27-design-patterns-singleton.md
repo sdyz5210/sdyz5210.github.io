@@ -12,7 +12,7 @@ tags: [java,设计模式]
 
 * windows 任务管理器
 * 数据库连接池的设计
-* Spring中的Bean
+* Spring中的Bean都是单例模式
 * 网站的计数器功能
 
 ### 代码示例 ###

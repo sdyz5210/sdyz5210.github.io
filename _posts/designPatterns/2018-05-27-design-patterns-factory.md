@@ -12,7 +12,8 @@ tags: [java,设计模式]
 
 ### 使用场景 ###
 
-* 
+* JDBC Connection对象的获取
+* Spring IOC中Bean的管理
 
 ### 简单工厂模式 ###
 
