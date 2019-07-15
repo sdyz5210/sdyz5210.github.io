@@ -2,6 +2,7 @@
 layout: post
 title: kafka在centos上安装
 tags: [centos]
+
 ---
 
 ### 前言
