@@ -22,7 +22,7 @@ spingboot的版本为2.x版本，本案例使用的是2.1.7版本。
 
 ### Lettuce方式
 
-1. 在`pom.xml`中配置`spring-boot-starter-data-redis`的依赖。
+1、在`pom.xml`中配置`spring-boot-starter-data-redis`的依赖。
 
 ```
 <dependency>
@@ -45,7 +45,7 @@ spingboot的版本为2.x版本，本案例使用的是2.1.7版本。
 
 ```
 
-2. 在`application.properties`文件中配置如下内容
+2、在`application.properties`文件中配置如下内容
 
 ```
 
@@ -63,36 +63,36 @@ spring:
 
 ```
 
-3. 自定义Template：默认情况下模板只支持RedisTemplate<String,Strinig>，也就是只能存入字符串，这在开发中是不友好的，所以自定义模板很有必要。当自定义了模板又想使用String存储时可以继续使用`StringRedisTemplate`的方式，它们并不冲突。
-
+只要配置以上2点就可以了，其他的配置springboot都已经给我们配置好了。以下是springboot自动配置的源码，可以参考：
 
 ```
 
-package com.xxx.web.config;
-
-import org.springframework.boot.autoconfigure.AutoConfigureAfter;
-import org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.data.redis.connection.RedisConnectionFactory;
-import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
-import org.springframework.data.redis.serializer.StringRedisSerializer;
-
-import java.io.Serializable;
-
 @Configuration
-@AutoConfigureAfter(RedisAutoConfiguration.class)
-public class RedisConfig {
+@ConditionalOnClass({RedisOperations.class})
+@EnableConfigurationProperties({RedisProperties.class})
+@Import({LettuceConnectionConfiguration.class, JedisConnectionConfiguration.class})
+public class RedisAutoConfiguration {
+    public RedisAutoConfiguration() {
+    }
     @Bean
-    public RedisTemplate<String, Serializable> redisCacheTemplate(RedisConnectionFactory redisConnectionFactory) {
-        RedisTemplate<String, Serializable> template = new RedisTemplate<>();
-        template.setKeySerializer(new StringRedisSerializer());
-        template.setValueSerializer(new GenericJackson2JsonRedisSerializer());
+    @ConditionalOnMissingBean(
+        name = {"redisTemplate"}
+    )
+    public RedisTemplate<Object, Object> redisTemplate(RedisConnectionFactory redisConnectionFactory) throws UnknownHostException {
+        RedisTemplate<Object, Object> template = new RedisTemplate();
+        template.setConnectionFactory(redisConnectionFactory);
+        return template;
+    }
+    @Bean
+    @ConditionalOnMissingBean
+    public StringRedisTemplate stringRedisTemplate(RedisConnectionFactory redisConnectionFactory) throws UnknownHostException {
+        StringRedisTemplate template = new StringRedisTemplate();
         template.setConnectionFactory(redisConnectionFactory);
         return template;
     }
 }
+
+>StringRedisTemplate是RedisTemplate的子类，StringRedisTemplate中的问和value都是字符串，采用的序列化方案是StringRedisSerializer，而RedisTemplate则可以用来操作对象，RedisTemplate采用的序列化方案是JdkSerializationRedisSerializer。无论是StringRedisTemplate还是RedisTemplate，操作Redis的方法都是一致的．StringRedisTemplate和RedisTemplate都是通过opsForValue、opsForZSet或者opsForSet等方法首先获取一个操作对象，再使用该操作对象完成数据的读写。
 
 ```
 
@@ -108,14 +108,16 @@ public class RedisConfig {
 public class RedisTemplateTest {
     @Autowired
     private RedisTemplate redisTemplate;
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
 
     @Test
     public void redisTest(){
         //redis存储数据
         String key = "token";
-        redisTemplate.opsForValue().set(key,"123456");
+        stringRedisTemplate.opsForValue().set(key,"123456");
         //获取数据
-        String value = (String)redisTemplate.opsForValue().get(key);
+        String value = stringRedisTemplate.opsForValue().get(key);
         System.out.println("获取缓存中key为"+key+"的值为："+value);
 
         User user = new User();
@@ -126,7 +128,7 @@ public class RedisTemplateTest {
         redisTemplate.opsForValue().set("user",user);
 
         User u = (User) redisTemplate.opsForValue().get("user");
-        System.out.println(u.toString());
+        System.out.println("获取的用户为："+u.getUserName());
     }
 }
 
@@ -136,7 +138,7 @@ public class RedisTemplateTest {
 
 Jedis的配置可以很轻松的在Lettuce上修改。
 
-1. 修改`pom.xml`：
+1、修改`pom.xml`：
 
 ```
 
@@ -172,4 +174,4 @@ Jedis的配置可以很轻松的在Lettuce上修改。
 
 ```
 
-2. 修改`application.yum`中的redis配置，把lettuce修改成jedis即可。
+2、修改`application.yum`中的redis配置，把lettuce修改成jedis即可。
