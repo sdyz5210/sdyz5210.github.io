@@ -11,18 +11,18 @@ tags: [python]
 使用winrar打包的过程如下：
 
 第一步，右键选择需要打包的文件，选择'添加到压缩文件'
-![1](/images/selfExtractor_1.png) 
+![1](../../images/selfExtractor_1.png) 
 
 第二步，勾选'创建自解压缩格式压缩文件'，之后选择高级选项卡
-![2](/images/selfExtractor_2.png) 
+![2](../../images/selfExtractor_2.png) 
 
 第三步，选择自解压选项
-![3](/images/selfExtractor_3.png) 
+![3](../../images/selfExtractor_3.png) 
 
 第四部，在弹出来的窗口中，选择'高级'，后点击'点击添加快捷方式'
-![4](/images/selfExtractor_4.png) 
+![4](../../images/selfExtractor_4.png) 
 
 第五步,根据下图的说明填写
-![5](/images/selfExtractor_5.png)
+![5](../../images/selfExtractor_5.png)
 
 最后点击确定即可完成。 

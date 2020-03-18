@@ -10,7 +10,7 @@ tags: [java,设计模式]
 
 组合模式的核心：抽象构建角色：定义叶子和容器构建的共同点；叶子构建角色：无子节点；容器构建角色：有容器特定，可以包含子节点.
 
-![组合模式](/images/design.patterns.composite.png)
+![组合模式](../../images/design.patterns.composite.png)
 
 ### 使用场景 ####
 

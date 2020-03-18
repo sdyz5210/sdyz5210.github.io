@@ -12,8 +12,8 @@ tags: [jboss]
 
 #现状#
 如下图，默认eclipse中仅支持到5.0版本。
-![eclipse](/images/eclipse1.png)
-![eclipse](/images/eclipse2.png)
+![eclipse](../../images/eclipse1.png)
+![eclipse](../../images/eclipse2.png)
 
 #工具下载#
 若要eclipse支持到更高版本的jboss，需要安装jboss tools，目前该版本为：3.3.2。工具下载地址[jboss tools](http://tools.jboss.org/downloads/jbosstools/indigo/3.3.2.Final.html),下载下来的文件为：jbosstools-3.3.2.Final.aggregate-Update-2013-01-18_18-03-25-H229.zip
@@ -31,7 +31,7 @@ tags: [jboss]
 3、在eclipse安装目录下面dropins文件夹中创建一个文本文件，文件名为jbosstools.link.注意一定要使用link后缀。
 4、编辑jbosstools.link文件，输入`path=\home\summer\work\plugin\jbosstools` 保存即可。
 5、重启eclipse即可，再次检查我们是否可以安装成功，如下图：
-![eclipse](/images/eclipse3.png)
-![eclipse](/images/eclipse4.png)
+![eclipse](../../images/eclipse3.png)
+![eclipse](../../images/eclipse4.png)
 
 OK,插件安装成功。

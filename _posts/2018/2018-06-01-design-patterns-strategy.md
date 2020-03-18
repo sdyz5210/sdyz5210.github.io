@@ -9,7 +9,7 @@ tags: [java,设计模式]
 
 策略模式对应于解决某一个问题的一个算法族，允许用户从该算法族中任选一个算法解决某一问题，同时可以方便的更换算法或者增加新的算法。并且由客户端决定调用哪一个算法。
 
-![适配器模式](/images/design.patterns.strategy.png)
+![适配器模式](../../images/design.patterns.strategy.png)
 
 ### 使用场景 ####
 

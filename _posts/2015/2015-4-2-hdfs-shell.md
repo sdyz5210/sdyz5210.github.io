@@ -9,8 +9,8 @@ tags: [hdfs,hadoop]
 
 HDFS 是Hadoop分布式文件系统，那么对HDFS的操作，就是文件系统的基本操作，比如文件的创建、修改、删除、修改权限等，文件夹的创建、删除、重命名等。对HDFS 的操作命令类似于lLinux 的shell 对文件的操作，如ls、mkdir、rm 等。
 我们可以再已经安装HDFS文件系统的操作系统上使用‘hadoop fs’ 看到基本命令，如下图： 
- 
-![hdfs1](/images/hdfs1.png)  
+
+![hdfs1](../../images/hdfs1.png)  
 
 #命令解释  
 

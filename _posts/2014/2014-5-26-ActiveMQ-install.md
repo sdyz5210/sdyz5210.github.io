@@ -27,7 +27,7 @@ tags: [jms,activemq]
 另外还可以直接使用一下命令进行启动：
 
     bin/activemq console
-    
+
 启动成功可以看到一下界面：
 ![图片未正常显示](/images/activemq1.png "activemq启动成功")
 
@@ -35,7 +35,7 @@ tags: [jms,activemq]
 通过以下命令查看ActiveMQ是否成功，如下图所示：
 
     ps -ef|grep activemq
-![图片未正常显示](/images/activemq2.png "activemq验证")
+![图片未正常显示](../../images/activemq2.png "activemq验证")
 
 #停止
 ActiveMQ的停止命令如下：
@@ -48,4 +48,5 @@ ActiveMQ的停止命令如下：
 你可以通过浏览器访问以下地址来监控ActiveMQ
 
     http://localhost:8161/admin
-![图片未正常显示](/images/activemq3.png "activemq监控界面")
+
+![图片未正常显示](../../images/activemq3.png "activemq监控界面")

@@ -12,7 +12,7 @@ JPA是一套相当优秀的持久化规范，本例子使用的是Hibernate对JP
 本例子下载的版本为：hibernate-release-4.3.5.Final
 #Jar包
 解压缩下载的hibernate的压缩包，打开lib目录可以看到下面左侧的图片，我们在eclipse中创建一个java project项目，导入jar文件，jar文件直接从lib目录的jpa和required两个目录拷贝即可。创建的项目图片如下右侧图片
-![jpa1](/images/jpa1.png) 左--右 ![jpa2](/images/jpa2.png)
+![jpa1](../../images/jpa1.png) 左--右 ![jpa2](../../images/jpa2.png)
 #配置
 在项目的src路径下面建立META-INF目录，在该目录下面创建persistence.xml文件，具体内容如下：
 

@@ -12,7 +12,7 @@ tags: [question]
 
     [download](http://activemq.apache.org/download.html)
 结果显示内容如下图
-![图片未正常显示](/images/md1.png)
+![图片未正常显示](../../images/md1.png)
 
 所以如果想在pre和code格式中使用超链接，怎么设置呢？
 在markdown中，使用4个空格或者一个tab制表符形成的pre和code格式，之间的内容会放到双引号作为一个文本，所以里面的link不会运行点击。如果想要code中的链接可以点击，需要使用HTML的方式，代码如下：
