@@ -15,7 +15,7 @@ OMIM 全称叫做Online Mendelian Inheritance in Man， 是一个不断更新的
 
 OMIM官网网址为：`https://www.omim.org/`
 
-![](../../images/omim-20200318.png)
+![](/images/omim-20200318.png)
 
 
 

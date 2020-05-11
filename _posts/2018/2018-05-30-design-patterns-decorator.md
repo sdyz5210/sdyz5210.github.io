@@ -19,7 +19,7 @@ tags: [java,设计模式]
 
 具体装修角色：负责给构件对象增加新的责任。
 
-![装饰模式](../../images/design.patterns.decorator.png)
+![装饰模式](/images/design.patterns.decorator.png)
 
 ### 使用场景 ####
 

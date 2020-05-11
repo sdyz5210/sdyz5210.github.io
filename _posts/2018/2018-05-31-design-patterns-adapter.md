@@ -10,7 +10,7 @@ tags: [java,设计模式]
 
 适配器模式中的角色：目标接口：客户所期待的接口，目标可以是具体的或抽象的类，也可以是接口。需要适配的类（Adaptee）：需要适配的类或适配者类。适配器（Adapter）：通过包装一个需要适配的对象，把原接口转换成目标接口。　
 
-![适配器模式](../../images/design.patterns.adapter.png)
+![适配器模式](/images/design.patterns.adapter.png)
 
 ### 使用场景 ####
 

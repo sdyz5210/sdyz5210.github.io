@@ -15,7 +15,7 @@ tags: [java,设计模式]
 
 ### 观察者代码 ###
 
-![观察者模式](../../images/design.patterns.observer.png)
+![观察者模式](/images/design.patterns.observer.png)
 
 ```
 
@@ -136,7 +136,7 @@ public class ObServerTest {
 
 ### 观察者JDK代码 ###
 
-![观察者模式](../../images/design.patterns.observer.jdk.png)
+![观察者模式](/images/design.patterns.observer.jdk.png)
 
 ```
 

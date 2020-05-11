@@ -24,7 +24,7 @@ AOP的核心实现机制。
 
 ### 静态代理模式 ###
 
-![静态代理模式](../../images/design.patterns.proxy.static.png)
+![静态代理模式](/images/design.patterns.proxy.static.png)
 
 ```
 
