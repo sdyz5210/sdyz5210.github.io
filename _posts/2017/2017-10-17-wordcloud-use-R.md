@@ -23,13 +23,13 @@ tags: R
 最终形成的效果如图：  
 
 经营范围  
-![经营范围](../images/posts/R_wordcloud_1.png)
+![经营范围](../../../../images/posts/R_wordcloud_1.png)
 
 搜索关键词  
-![搜索关键词](../images/posts/R_wordcloud_2.png)
+![搜索关键词](../../../../images/posts/R_wordcloud_2.png)
 
 SEO关键词  
-![SEO关键词](../images/posts/R_wordcloud_3.png)
+![SEO关键词](../../../../images/posts/R_wordcloud_3.png)
 
 ### R程序
 
