@@ -5,4 +5,4 @@ category: program
 tags: [java]
 ---
 
-![annotation](../../images/annotation.jpg)
+![annotation](/images/annotation.jpg)

@@ -37,7 +37,7 @@ tags: [thunderbird]
 按下选项键再双击 Thunderbird 图标。
 
 经过上面的操作，我们可以看到下面的界面：
-![thunderbird1](../../images/thunderbird1.png)
+![thunderbird1](/images/thunderbird1.png)
 点击“创建配置文件”按照提示步骤一步一步操作即可。
 
 ##邮件备份##

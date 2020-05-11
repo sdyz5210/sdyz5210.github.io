@@ -28,7 +28,7 @@ npm -v
 
 如下图所示，成功。
 
-![coffeescript](../../images/coffeescript1.png)
+![coffeescript](/images/coffeescript1.png)
 
 #安装coffeescript
 接下来再进行安装coffeescript很简单了，一条命令即可搞定：
@@ -45,4 +45,4 @@ coffee -v
 
 显示如下图即成功：
 
-![coffeescript](../../images/coffeescript2.png)
+![coffeescript](/images/coffeescript2.png)
